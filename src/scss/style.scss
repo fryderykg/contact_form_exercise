@@ -1,0 +1,12 @@
+@import "typography";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fontMain;
+  margin: 0;
+}
+
