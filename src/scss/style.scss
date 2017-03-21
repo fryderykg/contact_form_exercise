@@ -13,19 +13,26 @@ body {
 .contact_form {
   background: url("../images/form_bg_desktop.jpg") center/cover;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
   h1 {
     color: rgb(255, 255, 255);
     font-size: 48px;
     font-weight: 300;
+    left: 50%;
     margin-top: 0;
+    position: absolute;
     text-align: center;
+    top: -100px;
+
   }
   .form_content {
     background: rgb(255, 255, 255);
-    height: 70vh;
-    margin: 0 auto;
+    height: 470px;
+    margin: auto auto;
     position: relative;
-    width: 80vw;
+    max-width: 800px;
     &:before {
       background: $colorGreen;
       content: "";
@@ -35,12 +42,75 @@ body {
       left: 50%;
       top: -2px;
       transform: translate(-50%, 0);
-      z-index: 10;
+      z-index: 5;
     }
   }
   .left_panel {
     height: 100%;
-    background: url("../images/form_photo.jpg") center/cover;
+    background: url("../images/form_photo.jpg") bottom/cover;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, .8)
+    }
+    @media (max-width: 992px) {
+      display: none;
+    }
+    .lineXsmall,
+    .lineSmall,
+    .lineMedium,
+    .lineLarge {
+      height: 2px;
+      position: absolute;
+      z-index: 10;
+    }
+    .lineXsmall {
+      background: $colorViolet;
+      top: 330px;
+      left: 100px;
+      width: 20px;
+    }
+    .lineSmall {
+      background: $colorGreen;
+      top: 50px;
+      left: 30px;
+      width: 80px;
+      box-shadow: 40px 60px 0 0 $colorGreen,
+                  50px 140px 0 0 rgb(255, 255, 255),
+                  70px 220px 0 0 $colorViolet,
+                  70px 300px 0 0 rgb(255, 255, 255);
+    }
+    .lineMedium {
+      background: rgb(255, 255, 255);
+      top: 90px;
+      left: 70px;
+      width: 100px;
+      box-shadow: 40px 120px 0 0 $colorViolet,
+                  30px 200px 0 0 rgb(255, 255, 255),
+                  50px 200px 0 0 rgb(255, 255, 255),
+                  50px 280px 0 0 $colorGreen,
+                  80px 280px 0 0 $colorGreen;
+    }
+    .lineLarge {
+      background: $colorViolet;
+      top: 70px;
+      left: 30px;
+      width: 160px;
+      box-shadow: 0 60px 0 0 white,
+                  80px 80px 0 0 $colorGreen,
+                  80px 100px 0 0 $colorViolet,
+                  0 160px 0 0 rgb(255, 255, 255),
+                  80px 160px 0 0 rgb(255, 255, 255),
+                  40px 180px 0 0 $colorGreen,
+                  40px 240px 0 0 $colorGreen,
+                  60px 240px 0 0 $colorGreen,
+                  90px 320px 0 0 $colorViolet;
+    }
   }
   .right_panel {
     padding: 50px 60px;
@@ -78,7 +148,7 @@ body {
     display: inline-block;
   }
   input {
-    width: 69%;
+    width: 68%;
     display: inline-block;
     padding-bottom: 5px;
   }
