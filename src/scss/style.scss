@@ -10,3 +10,26 @@ body {
   margin: 0;
 }
 
+.contact_form {
+  background: url("../images/form_bg_desktop.jpg") center/cover;
+  height: 100vh;
+  h1 {
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    font-weight: 300;
+    margin-top: 0;
+    text-align: center;
+  }
+  .form_content {
+    background: rgb(255, 255, 255);
+    height: 80vh;
+    margin: 0 auto;
+    width: 80vw;
+  }
+  .left_panel {
+    background: url("../images/form_photo.jpg") center/cover;
+  }
+  .right_panel {
+    padding: 30px;
+  }
+}

@@ -4,17 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
   <title>Contact form</title>
 </head>
 <body>
+  <section class="contact_form">
+    <h1>Your account</h1>
+    <div class="form_content row">
+      <div class="left_panel col-md-5"></div>
+      <div class="right_panel col-md-7">
+        <p>Take it all with you. Switch between devices, and pick up.</p>
+        <form>
+          <!-- Name -->
+          <div class="form-group">
+            <label for="inputName">Your name</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Your name">
+          </div>
 
+          <!-- Mobile number-->
+          <div class="form-group">
+            <label for="inputMobile">Mobile</label>
+            <select class="form-control" name="mobilePrefix" id="mobilePrefix">
+              <option disabled>Prefix</option>
+              <option>+48 (PL)</option>
+              <option>+1 (US)</option>
+              <option>+ 49 (DE)</option>
+            </select>
+            <input type="number" class="form-control" id="inputMobile" placeholder="Mobile phone">
+          </div>
+
+          <!-- Gender radios-->
+          <div class="radio">
+            <label>
+              <input type="radio" name="genderRadios" id="genderRadiosFemale" value="female">
+              Female
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="genderRadios" id="genderRadiosMale" value="male">
+              Male
+            </label>
+          </div>
+
+          <!-- Date of birth -->
+          <div class="form-group">
+            <label for="inputName">Date of birth</label>
+            <input type="number" class="form-control" id="inputBirthDay" placeholder="">
+            <input type="number" class="form-control" id="inputBirthMonth" placeholder="">
+            <input type="number" class="form-control" id="inputBirthYear" placeholder="">
+          </div>
+
+          <!-- Button-->
+          <div class="form-group">
+            <div class="input-group">
+              <div class="input-group-addon">Continue</div>
+              <button type="submit" class="btn btn-default form-control">
+                <span class="glyphicon glyphicon-arrow-right"></span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
 
   <!-- jQuery -->
   <script
-          src="https://code.jquery.com/jquery-3.1.1.min.js"
-          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-          crossorigin="anonymous">
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous">
+  </script>
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous">
   </script>
   <script src="js/main.js"></script>
 </body>
