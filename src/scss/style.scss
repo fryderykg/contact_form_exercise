@@ -24,7 +24,19 @@ body {
     background: rgb(255, 255, 255);
     height: 70vh;
     margin: 0 auto;
+    position: relative;
     width: 80vw;
+    &:before {
+      background: $colorGreen;
+      content: "";
+      height: 2px;
+      position: absolute;
+      width: 80px;
+      left: 50%;
+      top: -2px;
+      transform: translate(-50%, 0);
+      z-index: 10;
+    }
   }
   .left_panel {
     height: 100%;
