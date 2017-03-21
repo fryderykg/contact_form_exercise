@@ -11,11 +11,11 @@ body {
 }
 
 .contact_form {
-  background: url("../images/form_bg_desktop.jpg") center/cover;
+  background: url("../images/form_bg_desktop.jpg") left/cover;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-content: space-around;
+  align-content: center;
   h1 {
     color: rgb(255, 255, 255);
     font-size: 48px;
@@ -25,7 +25,10 @@ body {
     position: absolute;
     text-align: center;
     top: -100px;
-
+    transition: left 1s ease;
+    @media (max-width: 992px) {
+      left: 0;
+    }
   }
   .form_content {
     background: rgb(255, 255, 255);
@@ -33,6 +36,10 @@ body {
     margin: auto auto;
     position: relative;
     max-width: 800px;
+    @media (max-width: 800px) {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
     &:before {
       background: $colorGreen;
       content: "";
@@ -41,8 +48,14 @@ body {
       width: 80px;
       left: 50%;
       top: -2px;
+      transition: 1s ease;
+      transition-property: left, transform;
       transform: translate(-50%, 0);
       z-index: 5;
+      @media (max-width: 992px) {
+        left: 20px;
+        transform: translate(0, 0);
+      }
     }
   }
   .left_panel {
@@ -179,6 +192,13 @@ body {
   position: absolute;
   right: -45px;
   margin: 0;
+  transition: 1s ease;
+  transition-property: right, transform;
+  @media (max-width: 992px) {
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+
 
   .input-group-addon {
     background: $colorViolet;
