@@ -22,14 +22,105 @@ body {
   }
   .form_content {
     background: rgb(255, 255, 255);
-    height: 80vh;
+    height: 70vh;
     margin: 0 auto;
     width: 80vw;
   }
   .left_panel {
+    height: 100%;
     background: url("../images/form_photo.jpg") center/cover;
   }
   .right_panel {
-    padding: 30px;
+    padding: 50px 60px;
+    position: relative;
+    height: 100%;
   }
+
+  form {
+    margin-top: 50px;
+  }
+
+  label {
+    font-size: 10px;
+    color: $colorGrey;
+    display: block;
+  }
+  input,
+  select {
+    border-radius: 0;
+    box-shadow: none;
+    border: 0;
+    border-bottom: 2px solid $colorGreyLight;
+    outline: none;
+    display: block;
+    &:focus {
+      border-color: $colorViolet;
+      box-shadow: none;
+    }
+  }
+}
+
+.mobileNumber {
+  select {
+    width: 30%;
+    display: inline-block;
+  }
+  input {
+    width: 69%;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+}
+
+.dateOfBirth {
+  input {
+    border: 2px solid $colorGreyLight;
+    display: inline-block;
+    height: 45px;
+    &:nth-of-type(1) {width: 15%};
+    &:nth-of-type(2) {width: 35%};
+    &:nth-of-type(3) {width: 34%};
+  }
+  .inputSpacer {
+    background: $colorGreyLight;
+    display: inline-block;
+    height: 2px;
+    margin: 0 5px;
+    position: relative;
+    top: -3px;
+    width: 10px;
+  }
+}
+
+.btnContinueGroup {
+  bottom: -23px;
+  position: absolute;
+  right: -45px;
+  margin: 0;
+
+  .input-group-addon {
+    background: $colorViolet;
+    border-radius: 0;
+    border: none ;
+    color: rgb(255, 255, 255);
+    height: 45px;
+    width: 180px;
+  }
+
+  button.form-control {
+    background: lighten($colorViolet, 10);
+    border-radius: 0;
+    border: 0;
+    color: rgb(255, 255, 255);
+    height: 45px;
+    width: 45px;
+  }
+}
+
+.success > input {
+  border-color: $colorViolet;
+}
+
+.warning > input {
+  border-color: red;
 }

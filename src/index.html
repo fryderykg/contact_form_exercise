@@ -15,7 +15,7 @@
     <div class="form_content row">
       <div class="left_panel col-md-5"></div>
       <div class="right_panel col-md-7">
-        <p>Take it all with you. Switch between devices, and pick up.</p>
+        <p>Take it all with you. Switch between devices,<br> and pick up.</p>
         <form>
           <!-- Name -->
           <div class="form-group">
@@ -24,10 +24,10 @@
           </div>
 
           <!-- Mobile number-->
-          <div class="form-group">
+          <div class="form-group mobileNumber">
             <label for="inputMobile">Mobile</label>
             <select class="form-control" name="mobilePrefix" id="mobilePrefix">
-              <option disabled>Prefix</option>
+              <option disabled selected>Prefix</option>
               <option>+48 (PL)</option>
               <option>+1 (US)</option>
               <option>+ 49 (DE)</option>
@@ -50,17 +50,19 @@
           </div>
 
           <!-- Date of birth -->
-          <div class="form-group">
+          <div class="form-group dateOfBirth">
             <label for="inputName">Date of birth</label>
             <input type="number" class="form-control" id="inputBirthDay" placeholder="">
-            <input type="number" class="form-control" id="inputBirthMonth" placeholder="">
+            <div class="inputSpacer"></div>
+            <input type="text" class="form-control" id="inputBirthMonth" placeholder="">
+            <div class="inputSpacer"></div>
             <input type="number" class="form-control" id="inputBirthYear" placeholder="">
           </div>
 
           <!-- Button-->
-          <div class="form-group">
+          <div class="form-group btnContinueGroup">
             <div class="input-group">
-              <div class="input-group-addon">Continue</div>
+              <div class="input-group-addon">CONTINUE</div>
               <button type="submit" class="btn btn-default form-control">
                 <span class="glyphicon glyphicon-arrow-right"></span>
               </button>
