@@ -252,6 +252,8 @@ body {
     color: rgb(255, 255, 255);
     height: 45px;
     width: 180px;
+    position: relative;
+    right: -1px;
   }
 
   button.form-control {
@@ -279,4 +281,46 @@ body {
 .hidden {
   position: absolute;
   visibility: hidden;
+}
+
+.sideNav {
+  position: absolute;
+  right: -54px;
+  top: 20%;
+  ul {
+    padding-left: 0;
+
+  }
+  li {
+    cursor: pointer;
+    list-style-type: none;
+    margin-top: 40px;
+    &:before {
+      background: darken($colorGrey, 30);
+      content: "";
+      height: 2px;
+      position: absolute;
+      width: 25px;
+    }
+    &.active {
+      &:before {
+        background: $colorGreen;
+      }
+      p {
+        color: rgb(255, 255, 255);
+      }
+    }
+    p {
+      color: darken($colorGrey, 30);
+      font-size: 10px;
+      margin-bottom: 5px;
+      padding-left: 13px;
+      &:first-of-type {
+        padding-top: 10px;
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    display: none;
+  }
 }
