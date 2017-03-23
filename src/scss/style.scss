@@ -140,6 +140,7 @@ body {
     font-size: 10px;
     color: $colorGrey;
     display: block;
+    padding-left: 15px;
   }
   input,
   select {
@@ -169,7 +170,7 @@ body {
 }
 .radio {
   display: inline-block;
-  margin-right: 30px;
+  margin-right: 25px;
   input[type=radio] {
     display: none;
     &:checked + label,
