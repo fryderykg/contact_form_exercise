@@ -37,7 +37,7 @@ body {
   }
   .form_content {
     background: rgb(255, 255, 255);
-    height: 470px;
+    height: 500px;
     margin: auto auto;
     position: relative;
     max-width: 800px;
@@ -158,6 +158,7 @@ body {
     color: $colorGrey;
     display: block;
     padding-left: 15px;
+    padding-top: 0;
     margin-top: 10px;
     text-align: left;
   }
@@ -306,12 +307,12 @@ body {
   }
 }
 
-.success > input {
-  border-color: $colorViolet;
+.success {
+  border-color: $colorViolet !important;
 }
 
-.warning > input {
-  border-color: red;
+.warning {
+  border-color: red !important;
 }
 
 // To hide unnecessary label

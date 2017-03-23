@@ -26,21 +26,21 @@
           <div class="form-group name">
             <p class="label" aria-hidden="true">Your name</p>
             <label for="inputName" class="hidden">Your name</label>
-            <input type="text" class="form-control" id="inputName" placeholder="">
+            <input type="text" pattern="^[a-zA-Z-]{3,16}$" class="form-control" id="inputName" required>
           </div>
 
           <!-- Mobile number-->
           <div class="form-group mobileNumber">
             <p class="label" aria-hidden="true">Mobile</p>
             <label for="mobilePrefix" class="hidden">Mobile prefix</label>
-            <select class="form-control" name="mobilePrefix" id="mobilePrefix">
+            <select class="form-control" name="mobilePrefix" id="mobilePrefix" required>
               <option disabled selected></option>
               <option>+48 (PL)</option>
               <option>+1 (US)</option>
               <option>+ 49 (DE)</option>
             </select>
             <label for="inputMobile" class="hidden">Mobile</label>
-            <input type="number" class="form-control" id="inputMobile" placeholder="">
+            <input type="text" class="form-control" id="inputMobile" required pattern="^[0-9-()+]{3,20}">
           </div>
 
           <!-- Gender radios-->
@@ -62,13 +62,13 @@
           <div class="form-group dateOfBirth">
             <p class="label" aria-hidden="true">Date of birth</p>
             <label for="inputBirthDay" class="hidden">Day of birth</label>
-            <input type="text" class="form-control" id="inputBirthDay" >
+            <input type="text" class="form-control" id="inputBirthDay" required pattern="^[1-9]$|^[1-2][0-9]$|^3[0-1]$">
             <div class="inputSpacer"></div>
             <label for="inputBirthMonth" class="hidden">Month of birth</label>
-            <input type="text" class="form-control" id="inputBirthMonth">
+            <input type="text" class="form-control" id="inputBirthMonth" required pattern="^(January|February|March|April|May|June|July|August|September|October|November|December)">
             <div class="inputSpacer"></div>
             <label for="inputBirthYear" class="hidden">Year of birth</label>
-            <input type="text" class="form-control" id="inputBirthYear">
+            <input type="text" class="form-control" id="inputBirthYear" required pattern="^19[0-9]{2}$|^20[0-9]{2}$">
           </div>
 
           <!-- Button-->
