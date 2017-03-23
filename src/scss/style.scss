@@ -37,7 +37,8 @@ body {
   }
   .form_content {
     background: rgb(255, 255, 255);
-    height: 500px;
+    display: none;
+    height: 470px;
     margin: auto auto;
     position: relative;
     max-width: 800px;
@@ -132,13 +133,13 @@ body {
     }
   }
   .right_panel {
-    padding: 50px 60px;
+    padding: 40px 50px;
     position: relative;
     height: 100%;
     p.header {
       text-align: left;
       padding-left: 10px;
-      padding-right: 30px;
+      padding-right: 50px;
       margin-bottom: 0;
     }
     @media (max-width: 992px) {
@@ -305,10 +306,6 @@ body {
       background: $colorViolet;
     }
   }
-}
-
-.success {
-  border-color: $colorViolet !important;
 }
 
 .warning {

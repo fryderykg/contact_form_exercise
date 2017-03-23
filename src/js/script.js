@@ -1,4 +1,7 @@
 $(document).ready(function(){
+  // $(".form_content").fadeIn(2000);
+  $(".form_content").fadeIn(1500);
+
   var nameRegex = /^[a-zA-Z-]{3,16}$/;
   $("#inputName").on('keyup', function() {
     if (nameRegex.test($(this).val())) {
