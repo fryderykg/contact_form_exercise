@@ -11,7 +11,7 @@ $(document).ready(function(){
     }
   });
 
-  var mobileRegex = /^[0-9-()+]{3,20}/;
+  var mobileRegex = /^[0-9-\s+]{3,20}/;
   $("#inputMobile").on('keyup', function() {
     if (mobileRegex.test($(this).val())) {
       $(this).removeClass("warning")
@@ -20,7 +20,7 @@ $(document).ready(function(){
     }
   });
 
-  var dayRegex = /^[1-9]$|^[1-2][0-9]$|^3[0-1]$/;
+  var dayRegex = /^0[1-9]$|^[1-2][0-9]$|^3[0-1]$/;
   $("#inputBirthDay").on('keyup', function() {
     if (dayRegex.test($(this).val()))  {
       $(this).removeClass("warning")
@@ -29,7 +29,7 @@ $(document).ready(function(){
     }
   });
 
-  var monthRegex = /^(January|February|March|April|May|June|July|August|September|October|November|December)/;
+  var monthRegex = /^(January|February|March|April|May|June|July|August|September|October|November|December|0[1-9]$|^1[0-2])/;
   $("#inputBirthMonth").on('keyup', function() {
     if (monthRegex.test($(this).val())) {
       $(this).removeClass("warning")
