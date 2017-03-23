@@ -148,6 +148,7 @@ body {
     box-shadow: none;
     border: 0;
     border-bottom: 2px solid $colorGreyLight;
+    font-weight: 600;
     outline: none;
     display: block;
     &:focus {
@@ -244,7 +245,6 @@ body {
     transform: translate(50%, 0);
   }
 
-
   .input-group-addon {
     background: $colorViolet;
     border-radius: 0;
@@ -255,12 +255,15 @@ body {
   }
 
   button.form-control {
-    background: lighten($colorViolet, 10);
+    background: lighten($colorViolet, 5);
     border-radius: 0;
     border: 0;
     color: rgb(255, 255, 255);
     height: 45px;
     width: 45px;
+    &:hover {
+      background: $colorViolet;
+    }
   }
 }
 
@@ -270,4 +273,10 @@ body {
 
 .warning > input {
   border-color: red;
+}
+
+// To hide unnecessary label
+.hidden {
+  position: absolute;
+  visibility: hidden;
 }
