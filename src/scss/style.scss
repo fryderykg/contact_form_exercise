@@ -122,7 +122,8 @@ body {
                   40px 180px 0 0 $colorGreen,
                   40px 240px 0 0 $colorGreen,
                   60px 240px 0 0 $colorGreen,
-                  90px 320px 0 0 $colorViolet;
+                  90px 320px 0 0 $colorViolet,
+                  110px 320px 0 0 $colorViolet;
     }
   }
   .right_panel {
@@ -164,6 +165,49 @@ body {
     width: 68%;
     display: inline-block;
     padding-bottom: 5px;
+  }
+}
+.radio {
+  display: inline-block;
+  margin-right: 30px;
+  input[type=radio] {
+    display: none;
+    &:checked + label,
+    &:checked + label:before {
+      border-color: $colorGreen;
+    }
+    &:checked + label:after {
+      background: $colorGreen;
+    }
+  }
+  label {
+    align-items: center;
+    border: 2px solid $colorGreyLight;
+    color: rgb(0, 0, 0);
+    display: flex;
+    font-size: 26px;
+    height: 50px;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    width: 50px;
+    &:before {
+      content: "";
+      position: absolute;
+      right: -8px;
+      width: 15px;
+      height: 15px;
+      border: 2px solid $colorGreyLight;
+      background: rgb(255, 255, 255);
+    }
+    &:after {
+      background: rgb(255, 255, 255);
+      content: "";
+      height: 3px;
+      position: absolute;
+      right: -2px;
+      width: 3px;
+    }
   }
 }
 
