@@ -136,6 +136,7 @@ body {
     position: relative;
     height: 100%;
     p.header {
+      text-align: left;
       padding-left: 10px;
       padding-right: 30px;
       margin-bottom: 0;
@@ -152,12 +153,13 @@ body {
     }
   }
 
-  label {
+  .label {
     font-size: 10px;
     color: $colorGrey;
     display: block;
     padding-left: 15px;
     margin-top: 10px;
+    text-align: left;
   }
   input,
   select {

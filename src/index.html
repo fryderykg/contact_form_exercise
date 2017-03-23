@@ -24,13 +24,14 @@
         <form>
           <!-- Name -->
           <div class="form-group name">
-            <label for="inputName">Your name</label>
+            <p class="label" aria-hidden="true">Your name</p>
+            <label for="inputName" class="hidden">Your name</label>
             <input type="text" class="form-control" id="inputName" placeholder="">
           </div>
 
           <!-- Mobile number-->
           <div class="form-group mobileNumber">
-            <label for="inputMobile">Mobile</label>
+            <p class="label" aria-hidden="true">Mobile</p>
             <label for="mobilePrefix" class="hidden">Mobile prefix</label>
             <select class="form-control" name="mobilePrefix" id="mobilePrefix">
               <option disabled selected></option>
@@ -38,11 +39,12 @@
               <option>+1 (US)</option>
               <option>+ 49 (DE)</option>
             </select>
+            <label for="inputMobile" class="hidden">Mobile</label>
             <input type="number" class="form-control" id="inputMobile" placeholder="">
           </div>
 
           <!-- Gender radios-->
-          <label for="">Gender</label>
+          <p class="label" aria-hidden="true">Gender</p>
           <div class="radio">
             <input type="radio" name="genderRadios" id="genderRadiosFemale" value="female">
             <label for="genderRadiosFemale">
@@ -58,7 +60,7 @@
 
           <!-- Date of birth -->
           <div class="form-group dateOfBirth">
-            <label for="inputBirthDay" aria-hidden="true">Date of birth</label>
+            <p class="label" aria-hidden="true">Date of birth</p>
             <label for="inputBirthDay" class="hidden">Day of birth</label>
             <input type="text" class="form-control" id="inputBirthDay" >
             <div class="inputSpacer"></div>
